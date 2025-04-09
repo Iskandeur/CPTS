@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "I. Penetration Testing Process/2. Background & Preparation.md",
+                "file": "I. Penetration Testing Process/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Background & Preparation"
+              "title": "Untitled"
             }
           }
         ]
@@ -171,10 +171,11 @@
   },
   "active": "e7937ad88b1f4f2a",
   "lastOpenFiles": [
+    "I. Penetration Testing Process/2. Background & Preparation.md",
+    "I. Penetration Testing Process/Untitled.md",
     "I. Penetration Testing Process/1. Using Academy Effectively.md",
     "I. Penetration Testing Process/I. Penetration Testing Process.md",
     "I. Penetration Testing Process/pentest_stages.png",
-    "I. Penetration Testing Process/2. Background & Preparation.md",
     "README.md",
     "Untitled.md",
     "Untitled/Untitled.md",
