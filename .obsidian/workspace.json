@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "2. Background & Preparation"
             }
+          },
+          {
+            "id": "bf4cdcc6f0735328",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -40,7 +53,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -168,7 +182,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "e7937ad88b1f4f2a",
+  "active": "bf4cdcc6f0735328",
   "lastOpenFiles": [
     "I. Penetration Testing Process/1. Using Academy Effectively.md",
     "I. Penetration Testing Process/I. Penetration Testing Process.md",
