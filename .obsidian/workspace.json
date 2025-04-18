@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "I. Penetration Testing Process/2. Background & Preparation.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Background & Preparation"
+              "title": "README"
             }
           }
         ]
@@ -171,11 +171,11 @@
   },
   "active": "91adcebe0372a6f7",
   "lastOpenFiles": [
+    "I. Penetration Testing Process/4. Penetration Testing Phases - Project Closeout.md",
+    "I. Penetration Testing Process/2. Background & Preparation.md",
     "Formatting.md",
     "I. Penetration Testing Process/3. Penetration Testing Phases - Assessment Specific Stages.md",
-    "I. Penetration Testing Process/2. Background & Preparation.md",
     "I. Penetration Testing Process/1. Using Academy Effectively.md",
-    "I. Penetration Testing Process/4. Penetration Testing Phases - Project Closeout.md",
     "README.md",
     "I. Penetration Testing Process/I. Penetration Testing Process.md",
     "I. Penetration Testing Process/5. Preparing for Real-World pentests.md",
