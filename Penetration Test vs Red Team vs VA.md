@@ -24,6 +24,12 @@ Understanding the differences between these assessment types is crucial for prop
 - **Output:** Report detailing success/failure in achieving objectives, adversary path taken, defense evasion techniques used, and assessment of Blue Team performance.
 - **Analogy:** Simulating a specific disease progression or targeted attack to test the body's defenses and response mechanisms.
 
+## [[Blue Team]]
+
+- **Role:** The defenders within an organization.
+- **Responsibilities:** Strengthening defenses, analyzing risks, implementing security policies, monitoring for threats ([[SIEM]], [[IDS]]/[[IPS]]), responding to incidents (DFIR), configuring and managing security tools.
+- **Interaction:** The Blue Team is who the Red Team simulates attacks against, and who the Purple Team collaborates with.
+
 **Key Distinction:** A pentest tries to find *many/all* holes; a red team assessment tries to achieve a *specific goal* through *any* available hole, often stealthily.
 
 *Note: All three require proper authorization.* 
