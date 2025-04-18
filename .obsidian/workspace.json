@@ -182,6 +182,14 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "Post-Exploitation.md",
+    "Exploit Development.md",
+    "Exploit Prioritization.md",
+    "Exploitation.md",
+    "Proof-of-Concept (PoC).md",
+    "Common Vulnerabilities and Exposures (CVE).md",
+    "Vulnerability Research.md",
+    "Analysis Types.md",
     "Vulnerability Assessment.md",
     "Service Enumeration.md",
     "Host Enumeration.md",
@@ -200,16 +208,8 @@
     "II. Getting Started/II. Getting Started.md",
     "II. Getting Started/2. Setup.md",
     "II. Getting Started/1. Introduction.md",
-    "I. Penetration Testing Process/I. Penetration Testing Process.md",
     "I. Penetration Testing Process/pentest_stages.png",
-    "I. Penetration Testing Process/5. Preparing for Real-World pentests.md",
-    "I. Penetration Testing Process/2. Background & Preparation.md",
-    "I. Penetration Testing Process/1. Using Academy Effectively.md",
-    "Formatting.md",
-    "README.md",
     "II. Getting Started",
-    "I. Penetration Testing Process/4. Penetration Testing Phases - Project Closeout.md",
-    "I. Penetration Testing Process/3. Penetration Testing Phases - Assessment Specific Stages.md",
     "I. Penetration Testing Process"
   ]
 }
