@@ -2,12 +2,19 @@ The goal of this repository is to store important information, or any stuff I fi
 
 See [[Formatting]] for documentation standards.
 
-[[I. Penetration Testing Process]]
-[[II. Getting Started]]
+## Structure
 
-## Vault Restructuring Plan (Proposed)
+This vault uses an object-based structure. Each note represents a specific concept, tool, technique, or process related to penetration testing.
 
-The vault is undergoing a restructuring based on user request. The goal is to move from a chapter-based organization (copying blocks of text from the formation) to an **object-based structure**.
+Key starting points:
+
+- [[Penetration Testing Process]] - Overview of the stages.
+- [[Information Security (Infosec)]] - Foundational concepts.
+- [[Laws and Regulations (Cybersecurity)]] - Legal and ethical context.
+
+## Vault Restructuring Plan (Completed)
+
+The vault has been restructured based on user request. The goal was to move from a chapter-based organization to an **object-based structure**.
 
 This means creating dedicated notes for individual concepts, tools, techniques, or entities (e.g., `Ports.md`, `Nmap.md`, `Scope Questionnaire.md`, `Active Directory.md`, `Kerberos.md`, etc.).
 
