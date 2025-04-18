@@ -3,3 +3,4 @@ The goal of this repository is to store important information, or any stuff I fi
 See [[Formatting]] for documentation standards.
 
 [[I. Penetration Testing Process]]
+[[II. Getting Started]]

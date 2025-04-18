@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "da6646ea17b4d83c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "II. Getting Started/II. Getting Started.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "II. Getting Started"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,20 +184,22 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "91adcebe0372a6f7",
+  "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
-    "I. Penetration Testing Process/4. Penetration Testing Phases - Project Closeout.md",
-    "I. Penetration Testing Process/2. Background & Preparation.md",
-    "Formatting.md",
-    "I. Penetration Testing Process/3. Penetration Testing Phases - Assessment Specific Stages.md",
-    "I. Penetration Testing Process/1. Using Academy Effectively.md",
-    "README.md",
-    "I. Penetration Testing Process/I. Penetration Testing Process.md",
-    "I. Penetration Testing Process/5. Preparing for Real-World pentests.md",
     "I. Penetration Testing Process/pentest_stages.png",
+    "I. Penetration Testing Process/5. Preparing for Real-World pentests.md",
+    "I. Penetration Testing Process/2. Background & Preparation.md",
+    "I. Penetration Testing Process/1. Using Academy Effectively.md",
+    "II. Getting Started/1. Introduction.md",
+    "II. Getting Started/II. Getting Started.md",
+    "Formatting.md",
+    "README.md",
+    "II. Getting Started",
+    "I. Penetration Testing Process/4. Penetration Testing Phases - Project Closeout.md",
+    "I. Penetration Testing Process/3. Penetration Testing Phases - Assessment Specific Stages.md",
+    "I. Penetration Testing Process/I. Penetration Testing Process.md",
     "Untitled/Untitled.md",
     "Untitled/I. Penetration Testing Process.md",
-    "Untitled",
     "Test.md",
     "I. Penetration Testing Process",
     "Welcome.md",
