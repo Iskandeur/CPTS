@@ -25,10 +25,14 @@
             "id": "da6646ea17b4d83c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Analysis Types.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Analysis Types"
             }
           }
         ],
@@ -182,6 +186,7 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "pentest_stages.png",
     "Web Application Security Basics.md",
     "Network Ports and Protocols.md",
     "Shell (Computing).md",
@@ -207,8 +212,6 @@
     "Role of Pentester in Remediation.md",
     "Post-Remediation Testing.md",
     "Deliverable Acceptance.md",
-    "Report Review Meeting.md",
-    "I. Penetration Testing Process/pentest_stages.png",
     "II. Getting Started",
     "I. Penetration Testing Process"
   ]
