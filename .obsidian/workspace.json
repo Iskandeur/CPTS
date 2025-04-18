@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "II. Getting Started/II. Getting Started.md",
+                "file": "II. Getting Started/2. Setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "II. Getting Started"
+              "title": "2. Setup"
             }
           }
         ],
@@ -186,18 +186,19 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "II. Getting Started/1. Introduction.md",
+    "II. Getting Started/2. Setup.md",
+    "II. Getting Started/II. Getting Started.md",
+    "I. Penetration Testing Process/I. Penetration Testing Process.md",
     "I. Penetration Testing Process/pentest_stages.png",
     "I. Penetration Testing Process/5. Preparing for Real-World pentests.md",
     "I. Penetration Testing Process/2. Background & Preparation.md",
     "I. Penetration Testing Process/1. Using Academy Effectively.md",
-    "II. Getting Started/1. Introduction.md",
-    "II. Getting Started/II. Getting Started.md",
     "Formatting.md",
     "README.md",
     "II. Getting Started",
     "I. Penetration Testing Process/4. Penetration Testing Phases - Project Closeout.md",
     "I. Penetration Testing Process/3. Penetration Testing Phases - Assessment Specific Stages.md",
-    "I. Penetration Testing Process/I. Penetration Testing Process.md",
     "Untitled/Untitled.md",
     "Untitled/I. Penetration Testing Process.md",
     "Test.md",
