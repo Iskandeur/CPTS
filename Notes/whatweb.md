@@ -1,5 +1,4 @@
-#new 
-
+## Usage Examples
 
 ```shell-session
 Iskandeur@htb[/htb]$ whatweb 10.10.10.121
@@ -7,8 +6,7 @@ Iskandeur@htb[/htb]$ whatweb 10.10.10.121
 http://10.10.10.121 [200 OK] Apache[2.4.41], Country[RESERVED][ZZ], Email[license@php.net], HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.10.10.121], Title[PHP 7.4.3 - phpinfo()]
 ```
 
-[[whatweb]] is a handy tool and contains much functionality to automate web application enumeration across a network.
-
+`whatweb` is a handy tool for [[Information Gathering]] and contains much functionality to automate web application enumeration across a network.
 
 ```shell-session
 Iskandeur@htb[/htb]$ whatweb --no-errors 10.10.10.0/24
@@ -18,3 +16,4 @@ http://10.10.10.100 [200 OK] Apache[2.4.41], Country[RESERVED][ZZ], HTTPServer[U
 http://10.10.10.121 [200 OK] Apache[2.4.41], Country[RESERVED][ZZ], Email[license@php.net], HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.10.10.121], Title[PHP 7.4.3 - phpinfo()]
 http://10.10.10.247 [200 OK] Bootstrap, Country[RESERVED][ZZ], Email[contact@cross-fit.htb], Frame, HTML5, HTTPServer[OpenBSD httpd], IP[10.10.10.247], JQuery[3.3.1], PHP[7.4.12], Script, Title[Fine Wines], X-Powered-By[PHP/7.4.12], X-UA-Compatible[ie=edge]
 ```
+

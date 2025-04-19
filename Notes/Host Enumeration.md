@@ -18,9 +18,10 @@ Applies to both external and internal perspectives. Internal enumeration often r
 
 ## Methods
 
-- **OS Fingerprinting:** Using tools like [[Nmap]] with specific scan types (`-O`).
+- **OS Fingerprinting:** Using tools like `[[Nmap]]` with specific scan types (`-O`).
 - **Service-Specific Enumeration:** Deep dives into discovered services (e.g., enumerating [[SMB]] shares, querying [[SNMP]], exploring [[HTTP]] directories).
 - **Authenticated Scans:** If credentials are available (e.g., from [[OSINT]] or previous exploits), performing scans as an authenticated user often reveals significantly more information.
+- **User Enumeration:** Identifying valid usernames via services like [[SMTP]], [[SNMP]], [[SMB]], etc.
 
 ## Importance
 

@@ -19,7 +19,7 @@ Netcat is used extensively in penetration testing for various tasks:
         SSH-2.0-OpenSSH_8.4p1 Debian-3
         ```
 *   **File Transfer:** Can be used to transfer files between machines (details covered elsewhere).
-*   **Port Scanning:** Can perform basic port scanning (though tools like `nmap` are more specialized).
+*   **Port Scanning:** Can perform basic [[Port Scanning]] (though tools like `[[Nmap]]` are more specialized).
 
 ## Availability
 

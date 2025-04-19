@@ -1,5 +1,10 @@
-#new 
-https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+`[[HTTP]]` status codes are issued by a [[Web Server]] in response to a client's request made to the server. They indicate whether a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses (1xx), successful responses (2xx), redirects (3xx), client errors (4xx), and server errors (5xx).
+
+Understanding these codes is crucial for [[Web Enumeration]], diagnosing web application issues, and interpreting tool output.
+
+Source: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+## Status Code Classes
 
 |Status Code|Name|Description|Common Use Cases|
 |---|---|---|---|
@@ -24,31 +29,31 @@ https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 |301|Moved Permanently|The requested resource has been permanently moved to a new URL.|Permanent URL changes, SEO-friendly redirects.|
 |302|Found|The requested resource is temporarily located at a different URL.|Temporary redirects, often misused for permanent redirects.|
 |303|See Other|The response to the request can be found at a different URL, and the client should use a GET request to retrieve it.|Redirecting after a POST to prevent resubmission (Post/Redirect/Get pattern).|
-|304|Not Modified|The resource has not been modified since the last request (based on headers like If-Modified-Since).|Caching; used to save bandwidth when content hasn’t changed.|
+|304|Not Modified|The resource has not been modified since the last request (based on headers like If-Modified-Since).|Caching; used to save bandwidth when content hasn't changed.|
 |305|Use Proxy|The requested resource must be accessed through a proxy (deprecated).|Deprecated; historically used for proxy redirection.|
 |306|(Unused)|Reserved and unused in modern HTTP standards.|Not used.|
 |307|Temporary Redirect|The requested resource is temporarily located at a different URL, and the original method should be used.|Temporary redirects preserving the HTTP method (e.g., POST).|
 |308|Permanent Redirect|The requested resource has been permanently moved to a new URL, and the original method should be used.|Permanent redirects preserving the HTTP method.|
-|**4xx Client Error**||Responses indicating an error in the client’s request.||
+|**4xx Client Error**||Responses indicating an error in the client's request.||
 |400|Bad Request|The server cannot process the request due to malformed syntax or invalid parameters.|Invalid JSON, missing required fields, or malformed URLs.|
 |401|Unauthorized|The request requires authentication, and the client has not provided valid credentials.|Missing or invalid authentication tokens.|
 |402|Payment Required|Reserved for future use; sometimes used experimentally for paid APIs.|Rarely used; potential use in paywalled content or APIs.|
 |403|Forbidden|The client is authenticated but lacks permission to access the resource.|Access control restrictions, such as role-based access denial.|
 |404|Not Found|The requested resource could not be found on the server.|Broken links or nonexistent resources.|
 |405|Method Not Allowed|The HTTP method used is not supported for the requested resource.|Attempting a POST on a GET-only endpoint.|
-|406|Not Acceptable|The server cannot produce a response matching the client’s Accept headers.|Client requests unsupported content types (e.g., JSON instead of XML).|
+|406|Not Acceptable|The server cannot produce a response matching the client's Accept headers.|Client requests unsupported content types (e.g., JSON instead of XML).|
 |407|Proxy Authentication Required|The client must authenticate with a proxy to proceed.|Proxy servers requiring authentication.|
-|408|Request Timeout|The server timed out waiting for the client’s request.|Slow or stalled client requests.|
+|408|Request Timeout|The server timed out waiting for the client's request.|Slow or stalled client requests.|
 |409|Conflict|The request could not be completed due to a conflict with the current state of the resource.|Concurrent edits in APIs (e.g., version conflicts in PUT requests).|
 |410|Gone|The requested resource is permanently unavailable and will not be available again.|Removed resources with no forwarding address.|
 |411|Length Required|The server requires a Content-Length header, which was not provided.|Rare; malformed POST/PUT requests missing Content-Length.|
 |412|Precondition Failed|One or more preconditions in the request headers (e.g., If-Match) were not met.|Conditional requests failing, such as ETag mismatches.|
-|413|Payload Too Large|The request payload exceeds the server’s size limits.|Uploading files larger than the server’s maximum allowed size.|
-|414|URI Too Long|The request URI exceeds the server’s length limits.|Extremely long query strings or URLs.|
-|415|Unsupported Media Type|The request’s Content-Type is not supported by the server.|Sending XML to an API that only accepts JSON.|
+|413|Payload Too Large|The request payload exceeds the server's size limits.|Uploading files larger than the server's maximum allowed size.|
+|414|URI Too Long|The request URI exceeds the server's length limits.|Extremely long query strings or URLs.|
+|415|Unsupported Media Type|The request's Content-Type is not supported by the server.|Sending XML to an API that only accepts JSON.|
 |416|Range Not Satisfiable|The requested range of the resource cannot be provided (e.g., out-of-bounds range).|Invalid range requests in partial content scenarios.|
 |417|Expectation Failed|The server cannot meet the requirements of the Expect header.|Rare; issues with the Expect: 100-continue header.|
-|418|I'm a Teapot|A humorous code indicating the server refuses to brew coffee because it is a teapot (from an April Fools’ RFC).|Rarely used; mostly for fun or Easter eggs.|
+|418|I'm a Teapot|A humorous code indicating the server refuses to brew coffee because it is a teapot (from an April Fools' RFC).|Rarely used; mostly for fun or Easter eggs.|
 |421|Misdirected Request|The request was directed to a server that is not able to produce a response.|Misconfigured servers or incorrect routing.|
 |422|Unprocessable Content|The request was well-formed but semantically invalid (used in WebDAV).|Invalid data in APIs (e.g., missing required fields in JSON).|
 |423|Locked|The resource is locked and cannot be accessed (used in WebDAV).|WebDAV resources locked by another user or process.|
@@ -57,9 +62,9 @@ https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 |426|Upgrade Required|The client must upgrade to a different protocol to proceed.|Forcing clients to use HTTPS instead of HTTP.|
 |428|Precondition Required|The server requires the request to include preconditions (e.g., If-Match).|Preventing accidental overwrites in APIs.|
 |429|Too Many Requests|The client has sent too many requests in a given time frame (rate limiting).|API rate limiting or DDoS protection.|
-|431|Request Header Fields Too Large|The request headers exceed the server’s size limits.|Overly large headers, such as massive cookies.|
+|431|Request Header Fields Too Large|The request headers exceed the server's size limits.|Overly large headers, such as massive cookies.|
 |451|Unavailable For Legal Reasons|The resource is unavailable due to legal restrictions.|Content blocked due to government censorship or DMCA takedowns.|
-|**5xx Server Error**||Responses indicating an error on the server’s side.||
+|**5xx Server Error**||Responses indicating an error on the server's side.||
 |500|Internal Server Error|A generic error indicating the server encountered an unexpected condition.|Unhandled exceptions or server misconfigurations.|
 |501|Not Implemented|The server does not support the requested functionality.|Unsupported HTTP methods or unimplemented features.|
 |502|Bad Gateway|The server, acting as a gateway or proxy, received an invalid response from an upstream server.|Proxy or load balancer issues with backend servers.|

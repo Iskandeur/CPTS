@@ -26,11 +26,12 @@ Focuses on mapping the target organization's network infrastructure, both intern
 
 ## Process
 
-1.  Gather initial data from [[OSINT]].
-2.  Perform active reconnaissance (e.g., DNS lookups, zone transfers if possible, targeted port scans on known infrastructure).
-3.  Map discovered hosts, IP addresses, and domains.
-4.  Compare findings against the official scope defined in the [[Rules of Engagement (RoE)]].
-5.  Attempt to identify security products or defenses (e.g., [[WAF]], [[IDS]]/[[IPS]]) to inform [[Evasive Testing]] strategy.
+1.  Identify the target organization's internet-facing assets (IP ranges, domains) using [[OSINT]] and other reconnaissance techniques.
+2.  Perform active reconnaissance (e.g., DNS lookups, zone transfers if possible, targeted [[Port Scanning|port scans]] on known infrastructure).
+3.  Map the network structure (routers, firewalls, DMZs).
+4.  Map discovered hosts, IP addresses, and domains.
+5.  Compare findings against the official scope defined in the [[Rules of Engagement (RoE)]].
+6.  Attempt to identify security products or defenses (e.g., [[WAF]], [[IDS]]/[[IPS]]) to inform [[Evasive Testing]] strategy.
 
 ## Importance
 

@@ -34,4 +34,8 @@ A technique used primarily during [[Lateral Movement]] (and sometimes [[Post-Exp
 
 - Essential for exploring internal networks after an initial compromise.
 - Enables the use of familiar attacker tools against otherwise inaccessible targets.
-- Key enabler for effective [[Lateral Movement]]. 
+- Key enabler for effective [[Lateral Movement]].
+
+*   **Proxying Traffic:**
+    - Use the compromised host as a proxy to run scanning tools ([[Nmap]], etc.) or exploitation tools from the attacker's machine against internal targets.
+    - Tools like `proxychains`, `ssh` dynamic port forwarding (`-D`), `socat`, or Metasploit's `socks_proxy` module can facilitate this. 

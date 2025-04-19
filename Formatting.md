@@ -30,6 +30,7 @@ This document outlines the formatting conventions used throughout this documenta
 ### Code
 
 - **Inline Code:** Use single backticks (\`) for inline code, such as `variable_name` or `function()`. Avoid using italics for code.
+	- Do not put [[]] links in backticks, as in Obsidian it will not be recognized as such.
 - **Code Blocks:** Use triple backticks (\`\`\`) for multi-line code blocks. Specify the language after the opening backticks for syntax highlighting (e.g., \`\`\`python).
 
 ### Emphasis

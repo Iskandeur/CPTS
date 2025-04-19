@@ -16,7 +16,7 @@ Fundamental concepts for understanding network communication and identifying ser
 
 ## Importance for Pentesters
 
-- **Service Identification:** Scanning for open ports ([[Port Scanning]]) is a primary way to identify running services during [[Service Enumeration]].
+- **Service Identification:** Scanning for open ports (Port Scanning) is a primary way to identify running services during [[Service Enumeration]].
 - **Vulnerability Mapping:** Knowing the standard port for a service helps identify potentially vulnerable services (e.g., finding port 21 open suggests an [[FTP]] server).
 - **Non-Standard Ports:** Services running on unexpected ports can indicate attempts at obscurity or misconfiguration.
 - **Memorization:** Familiarity with common ports (21, 22, 23, 25, 53, 80, 161, 389, 443, 445, 3389, etc.) significantly speeds up analysis during assessments.

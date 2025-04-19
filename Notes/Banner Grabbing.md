@@ -1,8 +1,25 @@
 ## Description
 
-Banner grabbing is an enumeration technique used to gather information about services running on open ports. By connecting to a service, we can often retrieve a "banner" - a text response that typically includes the software name and version.
+Banner grabbing is a technique used to identify information about network services running on open ports, such as the application name and version.
 
-This information is valuable for identifying potential vulnerabilities associated with specific software versions.
+## Methods
+
+*   **Manual Connection:** Using tools like `[[Netcat]]` or `telnet` to connect to the port and observe the initial response (banner) sent by the service.
+*   **Automated Tools:** Employing scanners that incorporate banner grabbing features.
+    *   `[[Nmap]]`: Includes scripts and options specifically for service version detection (`-sV`), which relies heavily on banner grabbing.
+    *   Specialized tools: Some vulnerability scanners or enumeration tools also perform banner grabbing.
+
+## Information Gathered
+
+*   Service Name (e.g., Apache, OpenSSH, vsftpd)
+*   Service Version (e.g., Apache/2.4.41, OpenSSH 8.2p1)
+*   Operating System Clues (e.g., "(Ubuntu)" in the Apache banner)
+
+## Use Cases
+
+*   **[[Service Enumeration]]:** Identifying running services.
+*   **[[Vulnerability Research]]:** Finding known vulnerabilities associated with specific service versions.
+*   **[[OS Detection]] Clues:** Gathering hints about the underlying operating system.
 
 ## Example using Netcat
 
