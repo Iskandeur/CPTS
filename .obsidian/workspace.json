@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exploitation.md",
+                "file": "Information Gathering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exploitation"
+              "title": "Information Gathering"
             }
           }
         ],
@@ -186,6 +186,11 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "Host Enumeration.md",
+    "Hack The Box (HTB).md",
+    "Formatting.md",
+    "External Penetration Test.md",
+    "Exploitation.md",
     "Exploit Prioritization.md",
     "Exploit Development.md",
     "Evasive Testing.md",
@@ -208,11 +213,6 @@
     "Shell (Computing).md",
     "VPN (Virtual Private Network).md",
     "Organization and Knowledge Management (Pentesting).md",
-    "Testing Environment Setup.md",
-    "Information Security (Infosec).md",
-    "Penetration Testing Process.md",
-    "OS.md",
-    "Laws and Regulations (Cybersecurity).md",
     "II. Getting Started",
     "I. Penetration Testing Process"
   ]
