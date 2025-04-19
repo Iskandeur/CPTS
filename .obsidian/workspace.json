@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exploit Development.md",
+                "file": "Exploitation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exploit Development"
+              "title": "Exploitation"
             }
           }
         ],
@@ -186,6 +186,8 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "Exploit Prioritization.md",
+    "Exploit Development.md",
     "Evasive Testing.md",
     "Powershell.md",
     "LOLBin.md",
@@ -211,8 +213,6 @@
     "Penetration Testing Process.md",
     "OS.md",
     "Laws and Regulations (Cybersecurity).md",
-    "Purple Teaming.md",
-    "Penetration Testing Types (Information Levels).md",
     "II. Getting Started",
     "I. Penetration Testing Process"
   ]
