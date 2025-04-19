@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Purple Teaming.md",
+                "file": "Testing Environment Setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Purple Teaming"
+              "title": "Testing Environment Setup"
             }
           },
           {
@@ -199,6 +199,17 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "Social Engineering.md",
+    "Shell.md",
+    "Service Enumeration.md",
+    "Scoping Questionnaire.md",
+    "Rules of Engagement (RoE).md",
+    "Role of Pentester in Remediation.md",
+    "Risk Management (Cybersecurity).md",
+    "Reporting.md",
+    "Report Review Meeting.md",
+    "README.md",
+    "Purple Teaming.md",
     "Proof-of-Concept (PoC).md",
     "Project Close Out.md",
     "Privilege Escalation.md",
@@ -214,17 +225,6 @@
     "Persistence.md",
     "Penetration Testing Types (Information Levels).md",
     "Penetration Testing Proposal.md",
-    "Penetration Testing Process.md",
-    "Penetration Test vs Red Team vs VA.md",
-    "OS.md",
-    "Organization and Knowledge Management (Pentesting).md",
-    "Open-Source Intelligence (OSINT).md",
-    "Social Engineering.md",
-    "Non-Disclosure Agreement (NDA).md",
-    "Network Ports and Protocols.md",
-    "README.md",
-    "FORMATTING.md",
-    "INSTRUCTIONS.md",
     "pentest_stages.png",
     "II. Getting Started",
     "I. Penetration Testing Process"
