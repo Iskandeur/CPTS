@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Netcat.md",
+                "file": "Service Enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Netcat"
+              "title": "Service Enumeration"
             }
           },
           {
@@ -215,11 +215,11 @@
   },
   "active": "9b2e1736414ef96a",
   "lastOpenFiles": [
+    "Netcat.md",
     "Vim.md",
     "Basic Tools.md",
     "Tmux.md",
     "FORMATTING.md",
-    "Netcat.md",
     "README.md",
     "Banner Grabbing.md",
     "Reporting.md",
