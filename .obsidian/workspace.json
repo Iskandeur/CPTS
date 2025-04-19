@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -213,7 +213,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2f20aeeac9ded2b7",
+  "active": "9b2e1736414ef96a",
   "lastOpenFiles": [
     "Vim.md",
     "Basic Tools.md",

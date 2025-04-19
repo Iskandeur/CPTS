@@ -1,7 +1,4 @@
 #new 
-
-
-
 [Vim](https://linuxcommand.org/lc3_man_pages/vim1.html) is a great text editor that can be used for writing code or editing text files on Linux systems. One of the great benefits of using `Vim` is that it relies entirely on the keyboard, so you do not have to use the mouse, which (once we get the hold of it) will significantly increase your productivity and efficiency in writing/editing code. 
 
 We usually find `Vim` or `Vi` installed on compromised Linux systems, so learning how to use it allows us to edit files even on remote systems. `Vim` also has many other features, like extensions and plugins, which can significantly extend its usage and make for a great code editor. Let's see some of the basics of `Vim`. To open a file with `Vim`, we can add the file name after it:
@@ -45,3 +42,4 @@ There are many commands available to us. The following are some of them:
 
 `Vim` is a very powerful tool and has many other commands and features. This [cheatsheet](https://vimsheet.com) is an excellent resource for further unlocking the power of `Vim`.
 
+	Do the vimtutor.
