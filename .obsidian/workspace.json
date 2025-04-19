@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Retention.md",
+                "file": "Documentation Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Retention"
+              "title": "Documentation Skills"
             }
           }
         ],
@@ -186,6 +186,8 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "Deliverable Acceptance.md",
+    "Data Retention.md",
     "Data Exfiltration.md",
     "Contractors Agreement.md",
     "Continuous Learning.md",
@@ -211,8 +213,6 @@
     "Risk Management (Cybersecurity).md",
     "Penetration Test vs Red Team vs VA.md",
     "Hack The Box (HTB).md",
-    "Documentation Skills.md",
-    "Practice (Pentesting).md",
     "II. Getting Started",
     "I. Penetration Testing Process"
   ]
