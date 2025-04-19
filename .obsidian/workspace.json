@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information Gathering.md",
+                "file": "Network Ports and Protocols.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Information Gathering"
+              "title": "Network Ports and Protocols"
             }
           }
         ],
@@ -186,6 +186,15 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "LOLBin.md",
+    "Laws and Regulations (Cybersecurity).md",
+    "Cybercrime Convention (Budapest Convention).md",
+    "Lateral Movement.md",
+    "Kick-Off Meeting.md",
+    "Internal Penetration Test.md",
+    "Infrastructure Enumeration.md",
+    "Information Security (Infosec).md",
+    "Information Gathering.md",
     "Host Enumeration.md",
     "Hack The Box (HTB).md",
     "Formatting.md",
@@ -195,7 +204,6 @@
     "Exploit Development.md",
     "Evasive Testing.md",
     "Powershell.md",
-    "LOLBin.md",
     "WMI.md",
     "Documentation Skills.md",
     "Deliverable Acceptance.md",
@@ -204,15 +212,7 @@
     "Contractors Agreement.md",
     "Continuous Learning.md",
     "Common Vulnerabilities and Exposures (CVE).md",
-    "Cleanup.md",
-    "README.md",
-    "Analysis Types.md",
     "pentest_stages.png",
-    "Web Application Security Basics.md",
-    "Network Ports and Protocols.md",
-    "Shell (Computing).md",
-    "VPN (Virtual Private Network).md",
-    "Organization and Knowledge Management (Pentesting).md",
     "II. Getting Started",
     "I. Penetration Testing Process"
   ]
