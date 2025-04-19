@@ -77,3 +77,216 @@ Nmap done: 1 IP address (1 host up) scanned in 233.68 seconds
 
 This returns a lot more information. We see that it took a lot longer to scan 65,535 ports than 1,000 ports. The `-sC` and `-sV` options also increase the duration of a scan, as instead of performing a simple TCP handshake, they perform a lot more checks. We notice that this time there is a VERSION heading, which reports the service version and the operating system if this is possible to identify.
 
+So far, we know that the operating system is Ubuntu Linux. Application versions can also help reveal the target OS version. Take OpenSSH, for example. We see the reported version is `OpenSSH 8.2p1 Ubuntu 4ubuntu0.1`. From inspection of other Ubuntu SSH package [changelogs](https://launchpad.net/ubuntu/yakkety/+source/openssh/+changelog), we see the release version takes the format `1:7.3p1-1ubuntu0.1`. Updating our version to fit this format, we get `1:8.2p1-4ubuntu0.1`. A quick search for this version online reveals that it is included in Ubuntu Linux Focal Fossa 20.04.
+
+![Google search results for '1:8.2p1-4ubuntu0.1 release' showing links to OpenSSH package on Launchpad.](https://academy.hackthebox.com/storage/modules/77/google1.png)
+
+Another quick search reveals that the release date of this OS is April 23rd, 2020.
+
+![Google search results for 'Ubuntu focal 20.04 release date' showing April 23, 2020, as the release date.](https://academy.hackthebox.com/storage/modules/77/google2.png)
+
+However, it is worth noting that this cross-referencing technique is not entirely reliable, as it is possible to install more recent application packages on an older OS version. The script scan `-sC` flag causes `Nmap` to report the server headers `http-server-header` page and the page title `http-title` for any web page hosted on the webserver. The web page title `PHP 7.4.3 - phpinfo()` indicates that this is a PHPInfo file, which is often manually created to confirm that PHP has been successfully installed. The title (and PHPInfo page) also reveals the PHP version, which is worth noting if it is vulnerable.
+
+![PHP Version 7.4.3 information table showing system details, build date, server API, and configuration paths.](https://academy.hackthebox.com/storage/modules/77/phpinfo.png)
+#### Nmap Scripts
+
+Specifying `-sC` will run many useful default scripts against a target, but there are cases when running a specific script is required. For example, in an assessment scope, we may be asked to audit a large Citrix installation. We could use [this](https://raw.githubusercontent.com/cyberstruggle/DeltaGroup/master/CVE-2019-19781/CVE-2019-19781.nse) `Nmap` script to audit for the severe Citrix NetScaler vulnerability ([CVE-2019–19781](https://blog.rapid7.com/2020/01/17/active-exploitation-of-citrix-netscaler-cve-2019-19781-what-you-need-to-know/)), while `Nmap` also has other scripts to audit a Citrix installation.
+
+Service Scanning
+
+```shell-session
+Iskandeur@htb[/htb]$ locate scripts/citrix
+
+/usr/share/nmap/scripts/citrix-brute-xml.nse
+/usr/share/nmap/scripts/citrix-enum-apps-xml.nse
+/usr/share/nmap/scripts/citrix-enum-apps.nse
+/usr/share/nmap/scripts/citrix-enum-servers-xml.nse
+/usr/share/nmap/scripts/citrix-enum-servers.nse
+```
+
+The syntax for running an Nmap script is `nmap --script <script name> -p<port> <host>`.
+
+`Nmap` scripts are a great way to enhance our scans' functionality, and inspection of the available options will pay dividends. Check out the [Network Enumeration with Nmap](https://academy.hackthebox.com/module/details/19) module for a more detailed study of the `Nmap` tool.
+## Attacking Network Services
+
+#### Banner Grabbing
+
+As previously discussed, banner grabbing is a useful technique to fingerprint a service quickly. Often a service will look to identify itself by displaying a banner once a connection is initiated. Nmap will attempt to grab the banners if the syntax `nmap -sV --script=banner <target>` is specified. We can also attempt this manually using `Netcat`. Let us take another example, using the `nc` version of `Netcat`:
+
+```shell-session
+Iskandeur@htb[/htb]$ nc -nv 10.129.42.253 21
+
+(UNKNOWN) [10.129.42.253] 21 (ftp) open
+220 (vsFTPd 3.0.3)
+```
+
+This reveals that the version of `vsFTPd` on the server is `3.0.3`. We can also automate this process using `Nmap's` powerful scripting engine: `nmap -sV --script=banner -p21 10.10.10.0/24`.
+
+#### FTP
+
+It is worth gaining familiarity with FTP, as it is a standard protocol, and this service can often contain interesting data. A `Nmap` scan of the default port for FTP (21) reveals the vsftpd 3.0.3 installation that we identified previously. Further, it also reports that anonymous authentication is enabled and that a `pub` directory is available.
+
+```shell-session
+Iskandeur@htb[/htb]$ nmap -sC -sV -p21 10.129.42.253
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-20 00:54 GMT
+Nmap scan report for 10.129.42.253
+Host is up (0.081s latency).
+
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 ftp      ftp          4096 Dec 19 23:50 pub
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.2
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.78 seconds
+```
+
+Let us connect to the service using the `ftp` command-line utility.
+
+```shell-session
+Iskandeur@htb[/htb]$ ftp -p 10.129.42.253
+
+Connected to 10.129.42.253.
+220 (vsFTPd 3.0.3)
+Name (10.129.42.253:user): anonymous
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+
+ftp> ls
+227 Entering Passive Mode (10,129,42,253,158,60).
+150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp          4096 Feb 25 19:25 pub
+226 Directory send OK.
+
+ftp> cd pub
+250 Directory successfully changed.
+
+ftp> ls
+227 Entering Passive Mode (10,129,42,253,182,129).
+150 Here comes the directory listing.
+-rw-r--r--    1 ftp      ftp            18 Feb 25 19:25 login.txt
+226 Directory send OK.
+
+ftp> get login.txt
+local: login.txt remote: login.txt
+227 Entering Passive Mode (10,129,42,253,181,53).
+150 Opening BINARY mode data connection for login.txt (18 bytes).
+226 Transfer complete.
+18 bytes received in 0.00 secs (165.8314 kB/s)
+
+ftp> exit
+221 Goodbye.
+```
+
+In the above shell, we see that FTP supports common commands such as `cd` and `ls` and allows us to download files using the `get` command. Inspection of the downloaded `login.txt` reveals credentials that we could use to further our access to the system.
+
+```shell-session
+Iskandeur@htb[/htb]$ cat login.txt 
+
+admin:ftp@dmin123
+```
+
+#### SMB
+
+SMB (Server Message Block) is a prevalent protocol on Windows machines that provides many vectors for vertical and lateral movement. Sensitive data, including credentials, can be in network file shares, and some SMB versions may be vulnerable to RCE exploits such as [EternalBlue](https://www.avast.com/c-eternalblue). It is crucial to enumerate this sizeable potential attack surface carefully. `Nmap` has many scripts for enumerating SMB, such as [smb-os-discovery.nse](https://nmap.org/nsedoc/scripts/smb-os-discovery.html), which will interact with the SMB service to extract the reported operating system version.
+
+```shell-session
+Iskandeur@htb[/htb]$ nmap --script smb-os-discovery.nse -p445 10.10.10.40
+
+Starting Nmap 7.91 ( https://nmap.org ) at 2020-12-27 00:59 GMT
+Nmap scan report for doctors.htb (10.10.10.40)
+Host is up (0.022s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: CEO-PC
+|   NetBIOS computer name: CEO-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2020-12-27T00:59:46+00:00
+
+Nmap done: 1 IP address (1 host up) scanned in 2.71 seconds
+```
+
+In this case, the host runs a legacy Windows 7 OS, and we could conduct further enumeration to confirm if it is vulnerable to EternalBlue. The Metasploit Framework has several [modules](https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternalblue/) for EternalBlue that can be used to validate the vulnerability and exploit it, as we will see in a coming section. We can run a scan against our target for this module section to gather information from the SMB service. We can ascertain that the host runs a Linux kernel, Samba version 4.6.2, and the hostname is GS-SVCSCAN.
+#### Shares
+SMB allows users and administrators to share folders and make them accessible remotely by other users. Often these shares have files in them that contain sensitive information such as passwords. A tool that can enumerate and interact with SMB shares is [smbclient](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html). The `-L` flag specifies that we want to retrieve a list of available shares on the remote host, while `-N` suppresses the password prompt.
+
+Service Scanning
+
+```shell-session
+Iskandeur@htb[/htb]$ smbclient -N -L \\\\10.129.42.253
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	users           Disk      
+	IPC$            IPC       IPC Service (gs-svcscan server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available
+```
+
+This reveals the non-default share `users`. Let us attempt to connect as the guest user.
+
+```shell-session
+Iskandeur@htb[/htb]$ smbclient \\\\10.129.42.253\\users
+
+Enter WORKGROUP\users's password: 
+Try "help" to get a list of possible commands.
+
+smb: \> ls
+NT_STATUS_ACCESS_DENIED listing \*
+
+smb: \> exit
+```
+
+The `ls` command resulted in an access denied message, indicating that guest access is not permitted. Let us try again using credentials for the user bob (`bob:Welcome1`).
+
+Service Scanning
+
+```shell-session
+Iskandeur@htb[/htb]$ smbclient -U bob \\\\10.129.42.253\\users
+
+Enter WORKGROUP\bob's password: 
+Try "help" to get a list of possible commands.
+
+smb: \> ls
+  .                                   D        0  Thu Feb 25 16:42:23 2021
+  ..                                  D        0  Thu Feb 25 15:05:31 2021
+  bob                                 D        0  Thu Feb 25 16:42:23 2021
+
+		4062912 blocks of size 1024. 1332480 blocks available
+		
+smb: \> cd bob
+
+smb: \bob\> ls
+  .                                   D        0  Thu Feb 25 16:42:23 2021
+  ..                                  D        0  Thu Feb 25 16:42:23 2021
+  passwords.txt                       N      156  Thu Feb 25 16:42:23 2021
+
+		4062912 blocks of size 1024. 1332480 blocks available
+		
+smb: \bob\> get passwords.txt 
+getting file \bob\passwords.txt of size 156 as passwords.txt (0.3 KiloBytes/sec) (average 0.3 KiloBytes/sec)
+```
+
+We successfully gained access to the `users` share using credentials and gained access to the interesting file `passwords.txt`, which can be downloaded with the `get` command.
