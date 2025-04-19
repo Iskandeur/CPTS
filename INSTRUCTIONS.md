@@ -1,4 +1,5 @@
 The pages tagged by #new are still to be incorporated in the vault (excepted the template and README). What I mean by that is:
+- Move them in the Notes folder using CLI commands.
 - Correct orthograph, make slight improvements in formulation or grammar without totally replacing the original essence of my redacting.
 - Apply formatting according to [[FORMATTING]].
 - Add internal links to correctly integrate the note into the knowledge base:

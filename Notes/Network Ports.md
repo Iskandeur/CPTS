@@ -9,6 +9,7 @@ Fundamental concepts for understanding network communication and identifying ser
 
 ## Port Ranges
 
+- **Port 0** is a reserved port in TCP/IP networking and is not used in TCP or UDP messages. If anything attempts to bind to port 0 (such as a service), it will bind to the next available port above port 1,024 because port 0 is treated as a "wild card" port.
 - **Well-Known Ports (0-1023):** Assigned by IANA to standard, widely used services (e.g., 80 for [[HTTP]], 443 for [[HTTPS]], 22 for [[SSH]]). Usually require root/administrator privileges to bind to.
 - **Registered Ports (1024-49151):** Assigned by IANA for specific applications or services (e.g., 3389 for [[RDP]], 5432 for [[PostgreSQL]]).
 - **Dynamic/Private/Ephemeral Ports (49152-65535):** Used for temporary client-side connections or private services.
