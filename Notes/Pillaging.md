@@ -44,4 +44,11 @@ Understanding network context helps plan [[Lateral Movement]].
 
 - Directly shows the *value* an attacker can gain from compromising a host.
 - Often provides the keys (credentials, info) needed to move deeper into the network.
-- Example: Finding a password policy requiring only 8 non-special characters suggests [[Brute Force]] or password guessing might be effective against other accounts. 
+- Example: Finding a password policy requiring only 8 non-special characters suggests [[Brute Force]] or password guessing might be effective against other accounts.
+
+## **User Artifacts:**
+- Browser history/cookies/passwords
+- Configuration files (`.bashrc`, `.zshrc`, `.vimrc`, `.gitconfig`, etc.)
+- [[SSH]] keys (`~/.ssh/id_rsa`, `~/.ssh/authorized_keys`)
+- Application-specific files (e.g., database connection strings, API keys in code)
+- Command history (`.bash_history`, `.zsh_history`) 

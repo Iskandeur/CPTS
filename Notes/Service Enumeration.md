@@ -13,8 +13,10 @@ For each discovered service:
 ## Methods
 
 - **[[Port Scanning]]**: Using tools like [[Nmap]] to identify open [[Network Ports|ports]] and the services listening on them.
-- **Banner Grabbing:** Capturing information passively provided by services upon connection.
-- **Service-Specific Probing:** Using specialized clients or tools to interact with specific services and elicit version/configuration information.
+- **Service Detection (`-sV`):** Attempts to determine the version of the service running on open ports. Often involves [[Banner Grabbing]] and probing.
+- **Script Scanning (`-sC` or `--script`):** Runs default or specified [[Nmap Scripting Engine (NSE)|NSE scripts]] against targets for vulnerability detection, advanced enumeration, etc.
+- **OS Detection (`-O`):** Attempts to identify the target operating system.
+- **Traceroute (`--traceroute`):** Maps the network hops to the target.
 
 ## Importance
 
@@ -26,3 +28,9 @@ For each discovered service:
 ## Administrator Reluctance
 
 Administrators may avoid updating services due to fear of breaking functionality ("if it ain't broke, don't fix it"). This often leads to known vulnerabilities remaining unpatched, creating opportunities for exploitation. 
+
+### Techniques
+
+- **Port Scanning:** Identifying open TCP/UDP ports.
+- **[[Banner Grabbing]]:** Capturing information passively provided by services upon connection.
+- **Service-Specific Probing:** Sending crafted requests to identify service details (e.g., querying [[SMB]] for shares, [[SNMP]] for configuration). 

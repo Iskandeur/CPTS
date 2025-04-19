@@ -29,7 +29,11 @@ Often performed *early* in the [[Post-Exploitation]] phase, sometimes even befor
     - `~/.bashrc`, `~/.profile` modifications
     - Systemd Services
     - `rc.local`
-    - SSH Authorized Keys
+    - Private Keys (`id_rsa`, `id_ed25519`, etc.)
+    - Public Keys (`id_rsa.pub`, etc.)
+    - Known Hosts (`known_hosts`)
+    - [[SSH]] Authorized Keys (`authorized_keys`)
+    - SSH Config (`config`)
     - Modifying system binaries (less common/stealthy)
 - **Web Applications:**
     - Web Shells

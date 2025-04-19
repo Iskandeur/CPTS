@@ -33,13 +33,15 @@ In pentesting, "getting a shell" means gaining interactive command-line access t
 ### Types of Shell Connections
 
 - **[[Reverse Shell]]**
-    - **Mechanism:** The compromised target machine *initiates* a connection *back* to a listener controlled by the attacker on their attack machine.
-    - **Use Case:** Very common. Often bypasses firewalls that block incoming connections to the target but allow outgoing connections.
-    - **Setup:** Attacker starts a listener (e.g., using `nc`, `pwncat`, Metasploit) on their machine; exploit payload on target tells it to connect back to attacker's IP and listener port.
+    - **Concept:** Target machine connects *back* to the attacker machine.
+    - **Pros:** Often bypasses firewalls (target initiates outbound connection, which is usually less restricted).
+    - **Cons:** Attacker needs a listening port open and reachable from the target.
+    - **Setup:** Attacker starts a listener (e.g., using [[Netcat|nc]], `pwncat`, Metasploit) on their machine; exploit payload on target tells it to connect back to attacker's IP and listener port.
 - **[[Bind Shell]]**
-    - **Mechanism:** A listener is started *on the compromised target machine*, binding to a specific port. The attacker then *connects* from their machine *to* the target's listener port.
-    - **Use Case:** Less common due to firewalls often blocking incoming connections. Useful if outgoing connections from the target are blocked, but incoming are allowed, or for internal pivoting.
-    - **Setup:** Exploit payload starts a listener (e.g., `nc -lp <port> -e /bin/bash`) on the target; attacker connects using `nc <target_ip> <port>`.
+    - **Concept:** Attacker connects *to* a listener opened on the target machine.
+    - **Pros:** Simpler setup on the target.
+    - **Cons:** Target machine needs an open port accessible *by* the attacker (often blocked by firewalls).
+    - **Setup:** Exploit payload starts a listener (e.g., `nc -lp <port> -e /bin/bash`) on the target; attacker connects using [[Netcat|nc]] `<target_ip> <port>`.
 - **[[Web Shell]]**
     - **Mechanism:** A script (e.g., PHP, ASP, JSP) uploaded to a web server that accepts commands via HTTP requests (e.g., through URL parameters or POST data) and executes them on the server.
     - **Interaction:** Often semi-interactive or non-interactive (execute one command, see output). Can sometimes be upgraded to a fully interactive reverse/bind shell.

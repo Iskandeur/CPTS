@@ -30,6 +30,12 @@ A technology that creates a secure, encrypted connection (tunnel) over a less se
 - **Hostile Lab Networks:** When connected to shared lab VPNs (like HTB), treat the network as **hostile**. Assume other users may try to scan or attack your machine.
     - **Mitigation:**
         - Connect *only* from a dedicated, isolated [[Testing Environment Setup|attack VM]].
-        - Harden the VM: Disable password SSH login, firewall unnecessary ports, don't run unnecessary services (web servers, etc.).
+        - Harden the VM: Disable password [[SSH]] login, firewall unnecessary ports, don't run unnecessary services (web servers, etc.).
         - Do not store sensitive client data or personal information on VMs used for shared labs.
-- **VPN Service Security:** The security of the VPN itself depends on the provider's implementation, protocols used (e.g., OpenVPN, WireGuard, PPTP - avoid older/weaker ones), and configuration. 
+- **VPN Service Security:** The security of the VPN itself depends on the provider's implementation, protocols used (e.g., OpenVPN, WireGuard, PPTP - avoid older/weaker ones), and configuration.
+
+## Configuration
+
+- Configure your firewall to allow inbound connections on the VPN port (e.g., UDP 1194 for OpenVPN).
+- Harden the VM: Disable password [[SSH]] login, firewall unnecessary ports, don't run unnecessary services (web servers, etc.).
+- Use strong keys/certificates.
