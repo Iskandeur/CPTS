@@ -16,7 +16,7 @@ Information is key. It helps in:
 
 ## Categories
 
-Typically divided into four main categories:
+Typically divided into four main categories, often involving understanding [[Network Ports]] and [[Network Protocols]]:
 
 - [[Open-Source Intelligence (OSINT)]]
 - [[Infrastructure Enumeration]]

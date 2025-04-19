@@ -26,7 +26,7 @@ Defined in the [[Pre-Engagement Phase]] and documented in the [[Rules of Engagem
 
 ## Techniques
 
-*(Placeholder: Specific techniques can be added, e.g., payload obfuscation, C2 tunneling, living-off-the-land binaries ([[LOLBin]]s), timing attacks, modifying/disabling logging, memory injection, etc.)*
+*(Placeholder: Specific techniques can be added, e.g., payload obfuscation, C2 tunneling, living-off-the-land binaries ([[LOLBin]]), timing attacks, modifying/disabling logging, memory injection, etc.)*
 
 ## Impact of Detection
 

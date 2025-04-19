@@ -17,7 +17,7 @@ A command-line interface (CLI) program that allows users to interact with an ope
     - `fish` (Friendly Interactive SHell)
 - **Windows:**
     - `cmd.exe` (Command Prompt - traditional)
-    - `PowerShell` (Modern, more powerful object-oriented shell and scripting language)
+    - [[Powershell]] (Modern, more powerful object-oriented shell and scripting language)
 
 ## Use in Penetration Testing ("Getting a Shell")
 
@@ -47,4 +47,4 @@ In pentesting, "getting a shell" means gaining interactive command-line access t
 
 ### Shell Payloads
 
-Small scripts or commands used to establish these shell connections can be written in many languages (Python, Perl, Bash, PowerShell, PHP, etc.) depending on what the target system supports. 
+Small scripts or commands used to establish these shell connections can be written in many languages (Python, Perl, Bash, [[Powershell]], PHP, etc.) depending on what the target system supports. 

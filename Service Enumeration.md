@@ -1,6 +1,6 @@
 A category of [[Information Gathering]]. Follows [[Infrastructure Enumeration]].
 
-Focuses on identifying network services running on discovered hosts that allow interaction over the network (or locally).
+Focuses on identifying network services running on discovered hosts that allow interaction over the network (or locally). This involves understanding [[Network Ports]] and the [[Network Protocols]] they use.
 
 ## Goal
 
@@ -12,7 +12,7 @@ For each discovered service:
 
 ## Methods
 
-- **Port Scanning:** Using tools like [[Nmap]] to identify open ports and the services listening on them.
+- **[[Port Scanning]]**: Using tools like [[Nmap]] to identify open [[Network Ports|ports]] and the services listening on them.
 - **Banner Grabbing:** Capturing information passively provided by services upon connection.
 - **Service-Specific Probing:** Using specialized clients or tools to interact with specific services and elicit version/configuration information.
 
@@ -21,7 +21,7 @@ For each discovered service:
 - **Version Identification:** Crucial for [[Vulnerability Research]]. Outdated versions often have known [[CVE]]s.
 - **Understanding Functionality:** Helps infer the host's role and potential attack vectors.
 - **Finding Misconfigurations:** Default credentials, exposed management interfaces, etc.
-- **Identifying Non-Standard Services:** Services running on unexpected ports.
+- **Identifying Non-Standard Services:** Services running on unexpected [[Network Ports|ports]].
 
 ## Administrator Reluctance
 

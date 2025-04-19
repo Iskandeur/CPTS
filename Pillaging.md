@@ -13,7 +13,7 @@ Focuses on searching for and collecting sensitive information *locally* on a com
 
 - User directories (Downloads, Documents, Desktop)
 - Configuration files (web servers, applications, services)
-- Scripts (PowerShell, Bash, Python - may contain hardcoded credentials)
+- Scripts ([[Powershell]], Bash, Python - may contain hardcoded credentials)
 - Password vaults / KeePass databases
 - Browser history and saved passwords
 - Email archives (.pst files)

@@ -14,14 +14,14 @@ Often performed *early* in the [[Post-Exploitation]] phase, sometimes even befor
 
 ## Techniques (Examples)
 
-*(Specific techniques depend heavily on OS and privileges)*
+*(Specific techniques depend heavily on OS and privileges, sometimes leveraging [[LOLBin]]s)*
 
 - **Windows:**
     - Registry Run Keys (`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`)
     - Scheduled Tasks (`schtasks`)
     - Startup Folders
     - Service Creation (`sc create`)
-    - WMI Event Subscriptions
+    - [[WMI]] Event Subscriptions
     - DLL Hijacking
     - Modifying Shortcuts (.lnk files)
 - **Linux:**
