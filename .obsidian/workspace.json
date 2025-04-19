@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Penetration Testing Proposal.md",
+                "file": "Purple Teaming.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Penetration Testing Proposal"
+              "title": "Purple Teaming"
             }
           },
           {
@@ -199,6 +199,21 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "Proof-of-Concept (PoC).md",
+    "Project Close Out.md",
+    "Privilege Escalation.md",
+    "Pre-Engagement Phase.md",
+    "Pre-Engagement Meeting.md",
+    "Practice (Pentesting).md",
+    "Powershell.md",
+    "Post-Remediation Testing.md",
+    "Post-Exploitation.md",
+    "Post-Engagement Phase.md",
+    "Pivoting.md",
+    "Pillaging.md",
+    "Persistence.md",
+    "Penetration Testing Types (Information Levels).md",
+    "Penetration Testing Proposal.md",
     "Penetration Testing Process.md",
     "Penetration Test vs Red Team vs VA.md",
     "OS.md",
@@ -210,21 +225,6 @@
     "README.md",
     "FORMATTING.md",
     "INSTRUCTIONS.md",
-    "Network Ports.md",
-    "LOLBin.md",
-    "Laws and Regulations (Cybersecurity).md",
-    "Cybercrime Convention (Budapest Convention).md",
-    "Lateral Movement.md",
-    "Kick-Off Meeting.md",
-    "Internal Penetration Test.md",
-    "Infrastructure Enumeration.md",
-    "Information Security (Infosec).md",
-    "Information Gathering.md",
-    "Host Enumeration.md",
-    "Hack The Box (HTB).md",
-    "External Penetration Test.md",
-    "Exploitation.md",
-    "Exploit Prioritization.md",
     "pentest_stages.png",
     "II. Getting Started",
     "I. Penetration Testing Process"
