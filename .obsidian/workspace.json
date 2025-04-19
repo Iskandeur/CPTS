@@ -195,6 +195,10 @@
   },
   "active": "da6646ea17b4d83c",
   "lastOpenFiles": [
+    "OWASP Top 10.md",
+    "Web Application.md",
+    "Web Server.md",
+    "Network Protocols.md",
     "WMI.md",
     "Web Application Security Basics.md",
     "INSTRUCTIONS.md",
@@ -217,10 +221,6 @@
     "Project Close Out.md",
     "Privilege Escalation.md",
     "Pre-Engagement Phase.md",
-    "Pre-Engagement Meeting.md",
-    "Practice (Pentesting).md",
-    "Powershell.md",
-    "Post-Remediation Testing.md",
     "pentest_stages.png",
     "II. Getting Started",
     "I. Penetration Testing Process"
