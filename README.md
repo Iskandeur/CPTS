@@ -1,10 +1,11 @@
 The goal of this repository is to store important information, or any stuff I find interesting in my CPTS journey.
 
-See [[Formatting]] for documentation standards.
+See [[FORMATTING]] for documentation standards.
 
 ## Structure
 
 This vault uses an object-based structure. Each note represents a specific concept, tool, technique, or process related to penetration testing.
+Files about meta-topics (such as formatting) have their name capslocked.
 
 Key starting points:
 
