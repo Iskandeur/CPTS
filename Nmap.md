@@ -1,4 +1,4 @@
-#new 
+#new metadata to remove when this note will be processed: some of the demos here are not specific to nmap even if related to service scanning. We will have to do something about it. You will propose me options.
 
 To access a service remotely, we need to connect using the correct IP address and port number and use a language that the service understands. Manually examining all of the 65,535 ports for any available services would be laborious, and so tools have been created to automate this process and scan the range of ports for us. One of the most commonly used scanning tools is Nmap(Network Mapper).
 
@@ -261,8 +261,6 @@ smb: \> exit
 
 The `ls` command resulted in an access denied message, indicating that guest access is not permitted. Let us try again using credentials for the user bob (`bob:Welcome1`).
 
-Service Scanning
-
 ```shell-session
 Iskandeur@htb[/htb]$ smbclient -U bob \\\\10.129.42.253\\users
 
@@ -290,3 +288,29 @@ getting file \bob\passwords.txt of size 156 as passwords.txt (0.3 KiloBytes/sec)
 ```
 
 We successfully gained access to the `users` share using credentials and gained access to the interesting file `passwords.txt`, which can be downloaded with the `get` command.
+
+#### SNMP
+
+SNMP Community strings provide information and statistics about a router or device, helping us gain access to it. The manufacturer default community strings of `public` and `private` are often unchanged. In SNMP versions 1 and 2c, access is controlled using a plaintext community string, and if we know the name, we can gain access to it. Encryption and authentication were only added in SNMP version 3. Much information can be gained from SNMP. Examination of process parameters might reveal credentials passed on the command line, which might be possible to reuse for other externally accessible services given the prevalence of password reuse in enterprise environments. Routing information, services bound to additional interfaces, and the version of installed software can also be revealed.
+
+```shell-session
+Iskandeur@htb[/htb]$ snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0
+
+iso.3.6.1.2.1.1.5.0 = STRING: "gs-svcscan"
+```
+
+```shell-session
+Iskandeur@htb[/htb]$ snmpwalk -v 2c -c private  10.129.42.253 
+
+Timeout: No Response from 10.129.42.253
+```
+
+A tool such as [onesixtyone](https://github.com/trailofbits/onesixtyone) can be used to brute force the community string names using a dictionary file of common community strings such as the `dict.txt` file included in the GitHub repo for the tool.
+
+```shell-session
+Iskandeur@htb[/htb]$ onesixtyone -c dict.txt 10.129.42.254
+
+Scanning 1 hosts, 51 communities
+10.129.42.254 [public] Linux gs-svcscan 5.4.0-66-generic #74-Ubuntu SMP Wed Jan 27 22:54:38 UTC 2021 x86_64
+```
+
