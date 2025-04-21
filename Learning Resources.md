@@ -54,8 +54,6 @@ If you prefer to watch a video walkthrough while working on an easy machine, the
 | **<br><br>Easy Linux Boxes<br><br>** | **<br><br>Easy Windows Boxes<br><br>** |
 | ------------------------------------ | -------------------------------------- |
 
----
-
 #### Beginner Friendly HTB Challenges
 
 The HTB platform contains one-off challenges in a variety of categories. Some beginner-friendly challenges include:
@@ -63,11 +61,10 @@ The HTB platform contains one-off challenges in a variety of categories. Some be
 |[Find The Easy Pass](https://app.hackthebox.com/challenges/5)|[Weak RSA](https://app.hackthebox.com/challenges/6)|[You know 0xDiablos](https://app.hackthebox.com/challenges/106)|
 |---|---|---|
 
----
-
 #### Dante Prolab
 
 The HTB platform has various Pro Labs that are simulated enterprise networks with many interconnected hosts that players can use to practice their skills in a network containing multiple targets.  
 Successful exploitation of specific hosts will yield information that will help players when attacking hosts encountered later in the lab.
 
 The [Dante Pro Lab](https://app.hackthebox.com/prolabs/overview/dante) is the most beginner-friendly lab offered to date. This lab is geared towards players with some experience performing network and web application attacks and an understanding of networking concepts and the basics of penetration methodologies such as scanning/enumeration, lateral movement, privilege escalation, post-exploitation, etc.
+
