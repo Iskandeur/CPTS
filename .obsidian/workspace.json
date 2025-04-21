@@ -25,10 +25,14 @@
             "id": "358d2dfa1ef1eb5d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Web Shell.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web Shell"
             }
           }
         ],
@@ -183,6 +187,7 @@
   },
   "active": "358d2dfa1ef1eb5d",
   "lastOpenFiles": [
+    "2025-04-19.md",
     "Web Shell.md",
     "Bind Shell.md",
     "Reverse Shell.md",
@@ -209,7 +214,6 @@
     "Nmap Scripting Engine (NSE).md",
     "Notes/Banner Grabbing.md",
     "Nmap.md",
-    "GoBuster.md",
     "_assets/images/simple-tmux-cheatsheet.jpg",
     "_assets/images/pentest_stages.png",
     "Untitled.canvas",
