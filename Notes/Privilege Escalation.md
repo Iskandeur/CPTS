@@ -37,6 +37,9 @@ Involves techniques to increase permissions from those initially obtained during
 - **Token Impersonation/Theft (Windows):** Stealing access tokens from privileged processes or users.
 - **Exploiting sudo Configuration (Linux):** Abusing `sudo` rules that allow specific commands to be run as root.
 
+Privesc checklists exist, one excellent resource is [HackTricks](https://book.hacktricks.xyz), which has an excellent checklist for both [Linux](https://book.hacktricks.wiki/en/linux-hardening/linux-privilege-escalation-checklist.html) and [Windows](https://book.hacktricks.wiki/en/windows-hardening/checklist-windows-privilege-escalation.html) local privilege escalation. Another excellent repository is [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings), which also has checklists for both [Linux](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md) and [Windows](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md).
+#new 
+
 ## Escalation via Credentials
 
 Obtaining credentials for a higher-privileged user (e.g., through [[Pillaging]] or [[Kerberoasting]]) and simply logging in as that user *is* a form of privilege escalation. 

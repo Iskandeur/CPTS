@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Shell.md",
+                "file": "Notes/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web Shell"
+              "title": "Privilege Escalation"
             }
           }
         ],
@@ -187,8 +187,8 @@
   },
   "active": "358d2dfa1ef1eb5d",
   "lastOpenFiles": [
-    "2025-04-19.md",
     "Web Shell.md",
+    "2025-04-19.md",
     "Bind Shell.md",
     "Reverse Shell.md",
     "README.md",
