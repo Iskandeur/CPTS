@@ -5,8 +5,8 @@ Wordlists are text files containing lists of words, phrases, usernames, password
 ## Common Uses
 
 *   Password Cracking (e.g., with John the Ripper, Hashcat)
-*   Directory/File Enumeration (`[[GoBuster]]`, `ffuf`, `dirb`)
-*   Subdomain Enumeration (`[[GoBuster]]`, `ffuf`)
+*   Directory/File Enumeration ([[GoBuster]], `ffuf`, `dirb`)
+*   Subdomain Enumeration ([[GoBuster]], `ffuf`)
 *   Parameter Fuzzing
 *   Username Enumeration
 

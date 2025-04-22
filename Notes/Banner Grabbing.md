@@ -4,9 +4,9 @@ Banner grabbing is a technique used to identify information about network servic
 
 ## Methods
 
-*   **Manual Connection:** Using tools like `[[Netcat]]` or `telnet` to connect to the port and observe the initial response (banner) sent by the service.
+*   **Manual Connection:** Using tools like [[Netcat]] or `telnet` to connect to the port and observe the initial response (banner) sent by the service.
 *   **Automated Tools:** Employing scanners that incorporate banner grabbing features.
-    *   `[[Nmap]]`: Includes scripts and options specifically for service version detection (`-sV`), which relies heavily on banner grabbing.
+    *   [[Nmap]]: Includes scripts and options specifically for service version detection (`-sV`), which relies heavily on banner grabbing.
     *   Specialized tools: Some vulnerability scanners or enumeration tools also perform banner grabbing.
 
 ## Information Gathered

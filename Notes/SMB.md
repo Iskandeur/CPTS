@@ -14,7 +14,7 @@ Primarily used by Windows, but implementations like Samba exist for Unix-like sy
 
 ## Tools
 
-*   `[[smbclient]]`
+*   [[smbclient]]
 *   `smbmap`
 *   `enum4linux` / `enum4linux-ng`
-*   `[[Nmap]]` scripts (`smb-os-discovery`, `smb-enum-shares`, etc.) 
+*   [[Nmap]] scripts (`smb-os-discovery`, `smb-enum-shares`, etc.) 

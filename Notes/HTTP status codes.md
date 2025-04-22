@@ -1,4 +1,4 @@
-`[[HTTP]]` status codes are issued by a [[Web Server]] in response to a client's request made to the server. They indicate whether a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses (1xx), successful responses (2xx), redirects (3xx), client errors (4xx), and server errors (5xx).
+[[HTTP]] status codes are issued by a [[Web Server]] in response to a client's request made to the server. They indicate whether a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses (1xx), successful responses (2xx), redirects (3xx), client errors (4xx), and server errors (5xx).
 
 Understanding these codes is crucial for [[Web Enumeration]], diagnosing web application issues, and interpreting tool output.
 

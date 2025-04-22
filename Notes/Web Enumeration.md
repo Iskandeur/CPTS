@@ -2,14 +2,14 @@ When performing [[Service Enumeration]], we will often run into [[Web Server|web
 
 ## Directory Enumeration
 
-After discovering a web application, it is always worth checking to see if we can uncover any hidden files or directories on the webserver that are not intended for public access. We can use a tool such as `[[ffuf]]` or `[[GoBuster]]` to perform this directory enumeration. Sometimes we will find hidden functionality or pages/directories exposing sensitive data that can be leveraged to access the web application or even remote code execution on the web server itself.
+After discovering a web application, it is always worth checking to see if we can uncover any hidden files or directories on the webserver that are not intended for public access. Directory and file discovery involves searching for files and directories on a web server, particularly those not linked from the main page and potentially missed by standard web crawling. The aim is to uncover hidden administrative portals, configuration files, source code repositories, or other sensitive data left accessible due to misconfiguration or lack of proper access controls. We can use a tool such as [[ffuf]] or [[GoBuster]] to perform this directory enumeration. Sometimes we will find hidden functionality or pages/directories exposing sensitive data that can be leveraged to access the web application or even the underlying web server.
 
 ## Web Enumeration Techniques
 
 ### Banner Grabbing / Web Server Headers
 
 In the last section, we discussed [[Banner Grabbing]] for general purposes. Web server headers provide a good picture of what is hosted on a web server. They can reveal the specific application framework in use, the authentication options, and whether the server is missing essential security options or has been misconfigured.
-We can use `[[cURL]]` to retrieve server header information from the command line. `[[cURL]]` is another essential addition to our penetration testing toolkit, and familiarity with its many options is encouraged.
+We can use [[cURL]] to retrieve server header information from the command line. [[cURL]] is another essential addition to our penetration testing toolkit, and familiarity with its many options is encouraged.
 
 ```shell-session
 Iskandeur@htb[/htb]$ curl -IL https://www.inlanefreight.com
@@ -36,7 +36,7 @@ We can extract the version of web servers, supporting frameworks, and applicatio
 
 ### Robots.txt
 
-It is common for websites to contain a `[[robots.txt]]` file, whose purpose is to instruct search engine web crawlers such as Googlebot which resources can and cannot be accessed for indexing. The `[[robots.txt]]` file can provide valuable information such as the location of private files and admin pages.
+It is common for websites to contain a [[robots.txt]] file, whose purpose is to instruct search engine web crawlers such as Googlebot which resources can and cannot be accessed for indexing. The [[robots.txt]] file can provide valuable information such as the location of private files and admin pages.
 
 ### Source Code
 

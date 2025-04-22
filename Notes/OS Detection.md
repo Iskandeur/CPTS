@@ -10,6 +10,6 @@ OS Detection (or OS Fingerprinting) is the process of determining the operating 
 
 ## Tools
 
-*   `[[Nmap]]` (`-O` for active TCP/IP fingerprinting; `-sV` provides clues via service versions)
+*   [[Nmap]] (`-O` for active TCP/IP fingerprinting; `-sV` provides clues via service versions)
 *   `p0f` (passive fingerprinting)
 *   Specialized [[Nmap Scripting Engine (NSE)|NSE scripts]] (e.g., `smb-os-discovery.nse`) 

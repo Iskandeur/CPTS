@@ -17,6 +17,6 @@ DNS Enumeration is the process of identifying DNS records associated with a targ
 *   `nslookup`
 *   `dnsrecon`
 *   `dnsenum`
-*   `[[GoBuster]]` (`dns` mode)
+*   [[GoBuster]] (`dns` mode)
 *   `sublist3r`
 *   `amass` 

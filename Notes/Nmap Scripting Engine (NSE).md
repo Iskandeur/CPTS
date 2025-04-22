@@ -1,4 +1,4 @@
-The Nmap Scripting Engine (NSE) is one of `[[Nmap]]`'s most powerful and flexible features. It allows users to write (and share) simple scripts (using the `[[Lua]]` programming language) to automate a wide variety of networking tasks.
+The Nmap Scripting Engine (NSE) is one of [[Nmap]]'s most powerful and flexible features. It allows users to write (and share) simple scripts (using the [[Lua]] programming language) to automate a wide variety of networking tasks.
 
 These scripts can perform tasks such as:
 

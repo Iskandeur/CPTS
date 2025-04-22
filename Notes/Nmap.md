@@ -143,9 +143,9 @@ Nmap done: 1 IP address (1 host up) scanned in 2.71 seconds
 
 Once Nmap identifies open ports and services, the next step in [[Service Enumeration]] is often to interact directly with those services using specific client tools. For example:
 
-*   Use `[[Netcat]]` or `telnet` for manual [[Banner Grabbing]] and basic interaction.
-*   Use an `[[FTP]]` client (like the command-line `ftp`) to explore FTP servers.
-*   Use `[[smbclient]]` or other tools to enumerate [[SMB]] shares.
-*   Browse web services identified on ports like 80 or 443 using a web browser or tools like `[[cURL]]`.
+*   Use [[Netcat]] or `telnet` for manual [[Banner Grabbing]] and basic interaction.
+*   Use an [[FTP]] client (like the command-line `ftp`) to explore FTP servers.
+*   Use [[smbclient]] or other tools to enumerate [[SMB]] shares.
+*   Browse web services identified on ports like 80 or 443 using a web browser or tools like [[cURL]].
 
 Refer to specific notes on these protocols and tools for interaction details.

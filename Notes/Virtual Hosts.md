@@ -10,6 +10,6 @@ Techniques involve manipulating the `Host` header while making requests to the t
 
 ## Tools
 
-*   `[[GoBuster]]` (`vhost` mode)
+*   [[GoBuster]] (`vhost` mode)
 *   `ffuf` (`-H "Host: FUZZ.<domain>"`)
 *   Burp Suite Intruder 

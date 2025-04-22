@@ -30,7 +30,7 @@ This means creating dedicated notes for individual concepts, tools, techniques, 
 1.  Identify key objects/concepts from the existing notes and the formation material.
 2.  Create new markdown files for each object.
 3.  **Migrate relevant information from the old structure to the new object files, ensuring existing data finds its place.**
-4.  **Interlink related concepts using Obsidian's `[[WikiLink]]` format.**
+4.  **Interlink related concepts using Obsidian's [[WikiLink]] format.**
 5.  Update old links if necessary.
 
 This approach aims to make the vault a more dynamic and useful personal knowledge base throughout the CPTS journey.
@@ -40,7 +40,7 @@ This approach aims to make the vault a more dynamic and useful personal knowledg
 Based on the current structure and goals, here are some suggestions for enhancing the vault:
 
 1.  **Centralized Hubs/MOCs (Maps of Content):**
-    *   **Suggestion:** Create more "Map of Content" (MOC) notes to act as curated indexes for broader topics (e.g., `[[Networking MOC]]`, `[[Web Security MOC]]`, `[[Active Directory MOC]]`). Link related concept notes from these MOCs.
+    *   **Suggestion:** Create more "Map of Content" (MOC) notes to act as curated indexes for broader topics (e.g., [[Networking MOC]], [[Web Security MOC]], [[Active Directory MOC]]). Link related concept notes from these MOCs.
     *   **Meta-Suggestion:** Periodically review topics that could benefit from a dedicated MOC to improve navigation.
 
 2.  **Tagging Strategy:**

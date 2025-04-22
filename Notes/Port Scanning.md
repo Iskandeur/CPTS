@@ -1,6 +1,8 @@
 Port scanning is a fundamental technique used in [[Information Gathering]] to identify open [[Network Ports]] on a target host or network. By probing these ports, we can determine which services are potentially running and listening for connections.
 
-This process is crucial for understanding the attack surface and often precedes [[Service Enumeration]]. Tools like `[[Nmap]]` are commonly used for port scanning.
+This process is crucial for understanding the attack surface and often precedes [[Service Enumeration]]. Tools like [[Nmap]] are commonly used for port scanning.
+
+Network scanning involves probing target systems for open ports, identifying running services, and potentially detecting the operating system and version. It's a fundamental step in penetration testing, providing insights into potential vulnerabilities. The choice of scan type depends on the objectives, network conditions, desired stealth, and reliability. (Future links: [[TCP Scan Types]], [[UDP Scan Types]])
 
 ## Key Concepts
 
@@ -11,6 +13,6 @@ This process is crucial for understanding the attack surface and often precedes 
 
 ## Common Tools
 
-*   `[[Nmap]]`
+*   [[Nmap]]
 *   `masscan` (needs creation?)
 *   Built-in OS tools (less common for comprehensive scans) 
