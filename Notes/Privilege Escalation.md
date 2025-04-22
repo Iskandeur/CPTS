@@ -153,7 +153,7 @@ The easiest way is to check if we are allowed to add new scheduled tasks. In Lin
 2. `/etc/cron.d`
 3. `/var/spool/cron/crontabs/root`
 
-If we can write to a directory called by a cron job, we can write a bash script with a reverse shell command, which should send us a reverse shell when executed.
+If we can write to a directory called by a cron job, we can write a bash script with a [[Reverse Shell]] command, which should send us a reverse shell when executed.
 
 ## Escalation via Credentials
 

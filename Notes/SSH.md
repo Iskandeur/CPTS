@@ -23,7 +23,7 @@ SSH is versatile and can be used for:
 
 During penetration tests or real-world assessments, attackers often obtain credentials (cleartext passwords or SSH private keys) that allow direct connection to a system via SSH.
 
-An SSH connection offers several advantages over typical reverse shells:
+An SSH connection offers several advantages over typical [[Reverse Shell|reverse shells]]:
 
 *   **Stability:** SSH sessions are generally more stable.
 *   **Functionality:** Provides a full interactive shell.

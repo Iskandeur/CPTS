@@ -14,7 +14,7 @@
 
 `Socat` is a valuable tool for penetration testers.
 
-*   **Stable Shells:** A [statically compiled binary](https://github.com/andrew-d/static-binaries) of `socat` can often be transferred to a compromised system after gaining initial remote code execution (RCE) to establish a more stable and feature-rich reverse or bind shell compared to basic shells.
+*   **Stable Shells:** A [statically compiled binary](https://github.com/andrew-d/static-binaries) of `socat` can often be transferred to a compromised system after gaining initial remote code execution (RCE) to establish a more stable and feature-rich [[Reverse Shell|reverse]] or [[Bind Shell|bind shell]] compared to basic shells.
 *   **Relaying Traffic:** Useful for pivoting and tunneling traffic within networks.
 
 Due to its power and flexibility, `socat` should be part of every penetration tester's toolkit.

@@ -10,7 +10,7 @@ Netcat (`nc`, often called `ncat` in newer versions) is a fundamental network ut
 
 Netcat is used extensively in penetration testing for various tasks:
 
-*   **Connecting to Shells:** Its primary use is often for establishing reverse shells or connecting to bind shells (covered in detail elsewhere).
+*   **Connecting to Shells:** Its primary use is often for establishing [[Reverse Shell|reverse shells]] or connecting to [[Bind Shell|bind shells]] (covered in detail elsewhere).
 *   **Port Interaction / [[Banner Grabbing]]:** `netcat` can connect to any listening port to interact directly with the service or grab its banner to identify the running software.
     *   **Example:** Connecting to an [[SSH]] port (`22`) to retrieve its banner:
         ```shell-session
