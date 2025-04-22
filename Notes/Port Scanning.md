@@ -9,7 +9,7 @@ Network scanning involves probing target systems for open ports, identifying run
 *   **Open Port:** Indicates a service is actively listening on that port.
 *   **Closed Port:** Indicates that the host received the probe but no service is listening on that port.
 *   **Filtered Port:** Indicates that the probe was likely blocked by a firewall or other filtering mechanism, and the state (open or closed) cannot be determined.
-*   **Scan Types:** Different techniques exist (e.g., TCP SYN scan, TCP Connect scan, UDP scan) with varying levels of speed, stealth, and reliability. (Future links: `[[TCP Scan Types]]`, `[[UDP Scan Types]]`)
+*   **Scan Types:** Different techniques exist (e.g., TCP SYN scan, TCP Connect scan, UDP scan) with varying levels of speed, stealth, and reliability. (Future links: [[TCP Scan Types]], [[UDP Scan Types]])
 
 ## Common Tools
 

